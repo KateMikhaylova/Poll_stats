@@ -72,7 +72,7 @@ class PollStats:
         correct_answers = 0
 
         for poll in polls_list:
-            if poll.media.results:
+            if poll.media.results and poll.media.results.results:
                 total_answers += 1
                 correct = True
                 for option in poll.media.results.results:
